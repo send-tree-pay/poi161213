@@ -27,10 +27,22 @@
 $(document).ready(function() {
 //全域變數//global
 time = new Date();
-
+console.log(time);
 //
-
+poi();
 });
+
+function poi(){
+
+var new_dom = document.createElement("DIV");        // Create a <button> element
+var new_text = document.createTextNode("目錄");       // Create a text node
+new_dom.setAttribute("id", "div_title");
+new_dom.appendChild(new_text);                                // Append the text to <button>
+document.body.appendChild(new_dom);                    // Append <button> to <body>
+var tmp=document.getElementById("div_title");
+console.log(tmp.innerHTML);
+
+}
 </script>
 </head>
 <body>
