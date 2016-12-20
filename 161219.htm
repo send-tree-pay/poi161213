@@ -35,12 +35,18 @@ poi();
 function poi(){
 
 var new_dom = document.createElement("DIV");        // Create a <button> element
-var new_text = document.createTextNode("目錄");       // Create a text node
 new_dom.setAttribute("id", "div_title");
-new_dom.appendChild(new_text);                                // Append the text to <button>
-document.body.appendChild(new_dom);                    // Append <button> to <body>
-var tmp=document.getElementById("div_title");
-console.log(tmp.innerHTML);
+$("body").prepend(new_dom);//append
+$("#div_title").html("目錄");
+$("#div_title").append("<b>Hello world!</b>");
+console.log($("#div_title").html());
+
+//new_dom.innerHTML="目錄";
+//document.body.appendChild(new_dom);                    // Append <button> to <body>
+//var new_text = document.createTextNode("目錄");       // Create a text node
+//new_dom.appendChild(new_text);                                // Append the text to <button>
+//var tmp=document.getElementById("div_title");
+
 
 }
 </script>
