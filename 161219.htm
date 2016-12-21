@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="UTF-8">
-<title>陰陽師手遊</title>
+<title>蹦蹦跳姆咪</title>
 <script language="javascript1.0">var js_version="1.0";</script>
 <script language="javascript1.1">var js_version="1.1";</script>
 <script language="javascript1.2">var js_version="1.2";</script>
@@ -33,13 +33,59 @@ if(typeof poi == 'function'){
 console.log("function poi exists");
 poi();
 }
-
+if(typeof xiexie == 'function'){
+console.log("function xiexie exists");
+xiexie();
+}
+//
+xopowo();
 });
 
+function xopowo(){
+$("#starthere").html("姆咪");
+$("#starthere").prepend("姆咪");
+$("#starthere").append("心動動");
+$("#starthere").after("媽的智障");
+
+var dom_ul = $('ul');
+for(var i = 0; i < dom_ul.length; i++) {
+	dom_ul[i].prepend("#"+i);
+	//tmp=dom_ul[i];
+	dom_li=$( dom_ul[i] ).find("li");
+	for(var j = 0; j < dom_li.length; j++) {
+			dom_li[j].append("*"+j);
+	}
+}
+console.log($( dom_ul[0] ).find("li")[1]);
+$( dom_ul[0] ).find("li")[1].append("姆咪");
+
+}
 
 </script>
+<STYLE>
+UL {
+border:#c0c0c0 5px solid;
+}
+LI {
+display: inline-block;
+width: 200px;
+height: 100px;
+margin: 0em;
+border:#c0c0c0 1px solid;
+}
+LI:nth-child(1) {
+background-color:yellow;
+}
+LI:nth-child(2) {
+background-color:red;
+}
+LI:nth-child(3) {
+background-color:blue;
+}
+</STYLE>
 </head>
 <body>
+<div id="starthere"></div>
 <UL>
   <LI>LI</LI>
   <LI>LI</LI>
