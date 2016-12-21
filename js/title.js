@@ -14,6 +14,8 @@ $("#div_title").attr("style","color:#FF0000;");
 $("#div_title").css("background-color","#FFFF00");
 console.log($("#div_title").attr("style"));//color: rgb(255, 0, 0); background-color: rgb(255, 255, 0);
 
+$("#div_title").append("<a href='./index.html'>主頁</a>/");
+$("#div_title").append("<a href='./161219.htm'>測試</a>/");
 
 //new_dom.innerHTML="目錄";
 //document.body.appendChild(new_dom);                    // Append <button> to <body>
